@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="UTF-8"/>  
+       <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie-edge">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <link rel="stylesheet" type="text/css" href="Cadastro.css" />
+       <link rel="stylesheet" href="Cadastro.css">
+       <title>MyGameList - Cadastro</title>
+   </head>
+   <body>  
+       <div class="slider">
+
+            <h1 class="teste">MYGAMELIST</h1>
+
+            <div>
+                <nav style="background-color: blue;" class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Católogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Disabled</a>
+                        </li>                      
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+           <div class="principal">
+
+                <div class="login-form">
+                    <form name='form_header' id='form_header' method=post  action=''>
+                        <h2 class="text-center">REALIZE SEU CADASTRO</h2>
+                
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="NOME" id='Nome'
+                                placeholder="Digite seu nome" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="SOBRENOME" id='Sobrenome'
+                                placeholder="Digite seu o seu sobrenome" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="USUÁRIO" id='Usuário'
+                                placeholder="Digite seu Usuário" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="EMAIL" id='email'
+                                placeholder="email@example.com" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="Data" id='data'
+                                placeholder="" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="SENHA" id='Senha' type="password"
+                                placeholder="Digite sua senha" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="CONFIRMAÇÃO SENHA" id='Confirmação Senha' type="password"
+                                placeholder="Confirme a sua senha" required="required">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" href="" class="btn btn-primary btn-lg btn-block">Criar Conta</button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

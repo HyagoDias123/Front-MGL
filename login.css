@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body {
+    color: #fff;
+    background: #fff;
+}
+
+.form-control {
+    min-height: 41px;
+    background: rgb(246, 250, 3);
+    box-shadow: none !important;
+    border-color: #e3e3e3;
+}
+
+.form-control:focus {
+    border-color: rgb(230, 19, 19);
+}
+
+.form-control,
+.btn {
+    border-radius: 2px;
+}
+
+.login-form {
+    width: 78%;
+    margin: 0 auto;
+    padding: 100px 0 30px;
+}
+
+.login-form form {
+    color: rgb(238, 255, 0);
+    border-radius: 2px;
+    margin: 0 auto;
+    font-size: 13px;
+    background:rgb(0, 0, 0);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    font-family: Open Sans, Arial, sans-serif;
+}
+
+.login-form h2 {
+    font-size: 22px;
+    margin: 35px 0 25px;
+}
+
+.login-form .avatar {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -750px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .avatar img {
+    width: 100%;
+}
+
+.login-form input[type="checkbox"] {
+    position: relative;
+    top: 1px;
+}
+
+.login-form .btn,
+.login-form .btn:active {
+    font-size: 16px;
+    font-weight: bold;
+    background: silver !important;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form .btn:hover,
+.login-form .btn:focus {
+    background: #0975e0 !important;
+}
+
+.login-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-form a:hover {
+    text-decoration: none;
+}
+
+.login-form form a {
+    color: rgb(238, 255, 5);
+    text-decoration: none;
+}
+
+.login-form form a:hover {
+    text-decoration: underline;
+}
+
+.login-form .bottom-action {
+    font-size: 14px;
+}
+
+.container-sair {
+    margin-left: 900px;
+}
+
+.modal-sair {
+    margin-top: -75px;
+    float: right;
+}
+
+.btn-sair {
+    background-color: transparent;
+    border: 1px solid;
+    color: #043566;
+    padding: 15px 32px;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-sair :hover {
+    color: #007cba;
+    transform: scale(1.2);
+}
+
+.btn-sair .btn:active {
+    transform: scale(1.2);
+    border: none;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    animation: slide 30s infinite;
+}
+.principal{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.principal h1{
+    font-size: 70px;
+    margin-bottom: 90px;
+    margin-top: -210px;
+    border: solid;
+    color: yellow;
+}
+
+@keyframes slide{
+    0%{
+        background-image: url('img/Hades.jpg');
+    }
+    10%{
+        background-image: url('img/Hades.jpg');
+    }
+    10.01%{
+        background-image: url('img/CupHead.jpg');
+    }
+    20%{
+        background-image: url('img/CupHead.jpg')
+    }
+    20.01%{
+        background-image: url('img/HorizonZero.jpg');
+    }
+    30%{
+        background-image: url('img/HorizonZero.jpg');
+    }
+    30.01%{
+        background-image: url('img/Stardew.jpg');
+    }
+    40%{
+        background-image: url('img/Stardew.jpg');
+    }
+    40.01%{
+        background-image: url('img/RE2.png');
+    }
+    50%{
+        background-image: url('img/RE2.png');
+    }
+    50.01%{
+        background-image: url('img/CODMW.jpg');
+    }
+    60%{
+        background-image: url('img/CODMW.jpg');
+    }
+    60.01%{
+        background-image: url('img/DragonBall.jpg');
+    }
+    70%{
+        background-image: url('img/DragonBall.jpg');
+    }
+    70.01%{
+        background-image: url('img/TheWitcher.jpg');
+    }
+    80%{
+        background-image: url('img/TheWitcher.jpg');
+    }
+    80.01%{
+        background-image: url('img/DarkSouls.jpg');
+    }
+    90%{
+        background-image: url('img/DarkSouls.jpg');
+    }
+    90.01%{
+        background-image: url('img/JumpForce.jpg');
+    }
+    100%{
+        background-image: url('img/JumpForce.jpg');
+    }
+}
