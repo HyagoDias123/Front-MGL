@@ -187,63 +187,63 @@ h1{
 
 @keyframes cadastro{
     0%{
-        background-image: url('imgCadastro/OuterWorlds.jpg');
+        background-image: url('assets/imgCadastro/OuterWorlds.jpg');
     }
     10%{
-        background-image: url('imgCadastro/OuterWorlds.jpg');
+        background-image: url('assets/imgCadastro/OuterWorlds.jpg');
     }
     10.01%{
-        background-image: url('imgCadastro/Zelda.jpg');
+        background-image: url('assets/imgCadastro/Zelda.jpg');
     }
     20%{
-        background-image: url('imgCadastro/Zelda.jpg')
+        background-image: url('assets/imgCadastro/Zelda.jpg')
     }
     20.01%{
-        background-image: url('imgCadastro/FF7.jpg');
+        background-image: url('assets/imgCadastro/FF7.jpg');
     }
     30%{
-        background-image: url('imgCadastro/FF7.jpg');
+        background-image: url('assets/imgCadastro/FF7.jpg');
     }
     30.01%{
-        background-image: url('imgCadastro/ForzaHorizon4.jpg');
+        background-image: url('assets/imgCadastro/ForzaHorizon4.jpg');
     }
     40%{
-        background-image: url('imgCadastro/ForzaHorizon4.jpg');
+        background-image: url('assets/imgCadastro/ForzaHorizon4.jpg');
     }
     40.01%{
-        background-image: url('imgCadastro/MarioOdyssey.png');
+        background-image: url('assets/imgCadastro/MarioOdyssey.png');
     }
     50%{
-        background-image: url('imgCadastro/MarioOdyssey.png');
+        background-image: url('assets/imgCadastro/MarioOdyssey.png');
     }
     50.01%{
-        background-image: url('imgCadastro/Persona.png');
+        background-image: url('assets/imgCadastro/Persona.png');
     }
     60%{
-        background-image: url('imgCadastro/Persona.png');
+        background-image: url('assets/imgCadastro/Persona.png');
     }
     60.01%{
-        background-image: url('imgCadastro/ACValhalla.jpg');
+        background-image: url('assets/imgCadastro/ACValhalla.jpg');
     }
     70%{
-        background-image: url('imgCadastro/ACValhalla.jpg');
+        background-image: url('assets/imgCadastro/ACValhalla.jpg');
     }
     70.01%{
-        background-image: url('imgCadastro/RDR2.jpg');
+        background-image: url('assets/imgCadastro/RDR2.jpg');
     }
     80%{
-        background-image: url('imgCadastro/RDR2.jpg');
+        background-image: url('assets/imgCadastro/RDR2.jpg');
     }
     80.01%{
-        background-image: url('imgCadastro/Crash.jpg');
+        background-image: url('assets/imgCadastro/Crash.jpg');
     }
     90%{
-        background-image: url('imgCadastro/Crash.jpg');
+        background-image: url('assets/imgCadastro/Crash.jpg');
     }
     90.01%{
-        background-image: url('imgCadastro/Tekken7.jpg');
+        background-image: url('assets/imgCadastro/Tekken7.jpg');
     }
     100%{
-        background-image: url('imgCadastro/Tekken7.jpg');
+        background-image: url('assets/imgCadastro/Tekken7.jpg');
     }
 }

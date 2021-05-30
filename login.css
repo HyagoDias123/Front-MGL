@@ -166,63 +166,63 @@ body {
 
 @keyframes slide{
     0%{
-        background-image: url('img/Hades.jpg');
+        background-image: url('assets/img/Hades.jpg');
     }
     10%{
-        background-image: url('img/Hades.jpg');
+        background-image: url('assets/img/Hades.jpg');
     }
     10.01%{
-        background-image: url('img/CupHead.jpg');
+        background-image: url('assets/img/CupHead.jpg');
     }
     20%{
-        background-image: url('img/CupHead.jpg')
+        background-image: url('assets/img/CupHead.jpg')
     }
     20.01%{
-        background-image: url('img/HorizonZero.jpg');
+        background-image: url('assets/img/HorizonZero.jpg');
     }
     30%{
-        background-image: url('img/HorizonZero.jpg');
+        background-image: url('assets/img/HorizonZero.jpg');
     }
     30.01%{
-        background-image: url('img/Stardew.jpg');
+        background-image: url('assets/img/Stardew.jpg');
     }
     40%{
-        background-image: url('img/Stardew.jpg');
+        background-image: url('assets/img/Stardew.jpg');
     }
     40.01%{
-        background-image: url('img/RE2.png');
+        background-image: url('assets/img/RE2.png');
     }
     50%{
-        background-image: url('img/RE2.png');
+        background-image: url('assets/img/RE2.png');
     }
     50.01%{
-        background-image: url('img/CODMW.jpg');
+        background-image: url('assets/img/CODMW.jpg');
     }
     60%{
-        background-image: url('img/CODMW.jpg');
+        background-image: url('assets/img/CODMW.jpg');
     }
     60.01%{
-        background-image: url('img/DragonBall.jpg');
+        background-image: url('assets/img/DragonBall.jpg');
     }
     70%{
-        background-image: url('img/DragonBall.jpg');
+        background-image: url('assets/img/DragonBall.jpg');
     }
     70.01%{
-        background-image: url('img/TheWitcher.jpg');
+        background-image: url('assets/img/TheWitcher.jpg');
     }
     80%{
-        background-image: url('img/TheWitcher.jpg');
+        background-image: url('assets/img/TheWitcher.jpg');
     }
     80.01%{
-        background-image: url('img/DarkSouls.jpg');
+        background-image: url('assets/img/DarkSouls.jpg');
     }
     90%{
-        background-image: url('img/DarkSouls.jpg');
+        background-image: url('assets/img/DarkSouls.jpg');
     }
     90.01%{
-        background-image: url('img/JumpForce.jpg');
+        background-image: url('assets/img/JumpForce.jpg');
     }
     100%{
-        background-image: url('img/JumpForce.jpg');
+        background-image: url('assets/img/JumpForce.jpg');
     }
 }
