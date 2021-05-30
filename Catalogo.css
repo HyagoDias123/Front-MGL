@@ -1,5 +1,5 @@
 body{
-    background-color:aqua;
+    background-color:black;
 }
 
 
@@ -75,6 +75,7 @@ h2{
   .dpFlex{
     display: flex;
     margin-left: 500px;
+    color: yellow;
   }
 
   h4{
@@ -84,6 +85,7 @@ h2{
   .dpFlexPlat{
     display: flex;
     margin-left: 500px;
+    color: yellow;
   }
 
   .dpFlexPlat table{
@@ -97,6 +99,7 @@ h2{
   .dpFlexAge{
     display: flex;
     margin-left: 500px;
+    color: yellow;
   }
 
   .dpFlexAge table{
