@@ -13,7 +13,8 @@ h2{
     color: yellow;
     border: 1px solid yellow;
     width: 250px;
-    margin-left: 740px;    
+    margin-left: 740px; 
+    text-align: center;   
 }
 
 .bg-light {

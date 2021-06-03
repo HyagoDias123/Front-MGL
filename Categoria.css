@@ -1,46 +1,68 @@
 body{
-    background-color:aqua;
+    background-color:rgb(2, 2, 2);
 }
 
+.nomesite{
+	text-align: center;
+}
 
 h1{
     color: yellow;
     border: 1px solid yellow;
     width: 250px;
     margin-left: 740px; 
+	text-align: center;
 }
 
 .bg-light {
-    background-color: #000000!important;
+    background-color:yellow !important;
 }
 
 .navbar-light .navbar-brand{
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 
 }
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
+.Categoria{
+	text-align: center;
+}
+
+h2{
+	color: yellow;
+    width: 360px;
+    margin-left: 692px; 
+	border: 2px solid yellow;
+	margin-top: 13px;
 }
 
 .caixa-jogos{
 	display: flex;
-	text-align: center;
 	margin-right: 20px;
 	margin-left:100px;
+	text-align: center;
 }
 
 .jogos {
 	width: 900px;
 	margin: 0 auto;
 	padding: 5px 0;
+	margin-top: 30px;
+	margin-left: 317px;
+}
+
+.jogos h3{
+	color: yellow;
 }
 
 .jogos li {
@@ -51,12 +73,15 @@ h1{
 	margin: 0 1.5%;
 	padding: 30px 20px;
 	box-sizing: border-box;
-	border: 2px solid #000000;
+	border: 2px solid yellow;
 	border-radius: 10px;
 }
 
 .jogos li img{
-	height: 300px;
+	max-height: 250px;
+	height: 250px;
+	max-width: 220px;
+	width: 220px;
 }
 
 .jogos li:hover {
