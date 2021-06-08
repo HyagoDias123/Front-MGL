@@ -3,6 +3,7 @@
 body {
     color: #fff;
     background: rgb(12, 12, 12);
+    width: 100%;
 }
 
 h1{
@@ -190,3 +191,7 @@ p {
     color: black;
 }
 
+@media screen and (min-width:
+1366px) {
+ #main { min-width: 720px; }
+}
