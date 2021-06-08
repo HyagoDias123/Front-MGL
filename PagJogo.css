@@ -164,6 +164,11 @@ p {
     color: yellow;
 }
 
+h6{
+    color: yellow;
+    text-decoration: underline;
+}
+
 .requisitos table{
     display: table;
     margin-left: 30px;
