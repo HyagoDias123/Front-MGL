@@ -68,22 +68,22 @@ p {
     left: 409px;
 }
 .bg-light {
-    background-color: #000000!important;
+    background-color: yellow!important;
 }
 .navbar-light .navbar-brand{
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 
 }
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
 }
 
 .imagemJogo h3{

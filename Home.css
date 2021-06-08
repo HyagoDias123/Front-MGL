@@ -1,0 +1,35 @@
+body{
+    background-color:rgb(2, 2, 2);
+}
+
+.nomesite{
+	text-align: center;
+}
+
+h1{
+    color: yellow;
+    border: 1px solid yellow;
+    width: 250px;
+    margin-left: 740px; 
+	text-align: center;
+}
+
+.bg-light {
+    background-color:yellow !important;
+}
+
+.navbar-light .navbar-brand{
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(0, 0, 0);
+
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(0, 0, 0);
+}
