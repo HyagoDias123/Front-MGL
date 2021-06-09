@@ -5,6 +5,10 @@ body {
     background: #fff;
 }
 
+.titulo{
+    margin-left: 825px;
+}
+
 h1{
     color: yellow;
     border: 1px solid yellow;
