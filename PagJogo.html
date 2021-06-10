@@ -37,10 +37,12 @@
         </nav>
     </div>
 
-    <select style=" margin-top: 25px; margin-left: 75px;">
-        <option></option>
-        <option></option>
+    <labe>Selecione um Jogo</labe>
+    <select id="cmbGames" style=" margin-top: 25px; margin-left: 75px;">
+        <option value="0"> Selecione </option>
     </select>
+
+    <input type="button" value="buscar" id="btnGames"/>
     
     <h2>Sinopse</h2>
 
@@ -172,51 +174,83 @@
 
 <script type="text/javascript">
     $(document).ready(function (){
+
+        let form = $("#frmSend");
+        var form_data = new FormData(form[0]); //Encode form elements for submission
         
-        $.ajax({
-           url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
-            type: "Get",
-            dataType: "json",
-            success: function (data) {
-                console.log(data);
-                $("#txtNomeArmazenamento").val(data.nomeArmazenamento);
-                document.getElementById("txtNomeArmazenamento").innerHTML= data.nomeArmazenamento;
-            },
-            error : function(erro){
-                alert("Erasmo here")
-                console.log("Erro");
-            }
+        $('#cmbGames').click(function(e){
+            $.ajax({
+            url :"https://localhost:44327/api/game/ObterListaGame",
+                type: "POST",
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    console.log(data);
+                    // $("#txtNomeArmazenamento").val(data.codigoGame);
+                    // document.getElementById("txtNomeArmazenamento").innerHTML= data.codigoGame;
+
+                    if (data.length > 0){
+                    var option = '<option>Selecione um Game </option>';
+                    $.each(data, function(i, obj){
+                    option += '<option value="'+obj.codigoGame+'">'+obj.nomeGame+'</option>';
+                    console.log(obj);
+                    $('#cmbGames').html(option).show();
+                    })
+                    }else{
+                        // Reset();
+                        // $('#mensagem').html('<span class="mensagem"
+                        // >Não foram encontrados paises!</span>');
+                        alert("Deu ruim");
+                    }
+                    },
+                error : function(erro){
+                    console.log("Erro");
+                }
+            });
         });
 
-        $.ajax({
-           url :"https://localhost:44327/api/GameDetail/ObterMemoriaGame",
-            type: "Get",
-            dataType: "json",
-            success: function (data) {
-                console.log(data);
-                $("#txtNomeMemoria").val(data.nomeMemoria);
-                document.getElementById("txtNomeMemoria").innerHTML= data.nomeMemoria;
-            },
-            error : function(erro){
-                alert("Erasmo here")
-                console.log("Erro");
-            }
-        });
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeArmazenamento").val(data.nomeArmazenamento);
+        //         document.getElementById("txtNomeArmazenamento").innerHTML= data.nomeArmazenamento;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
 
-        $.ajax({
-           url :"https://localhost:44327/api/GameDetail/ObterVideoGame",
-            type: "Get",
-            dataType: "json",
-            success: function (data) {
-                console.log(data);
-                $("#txtNomeVideo").val(data.nomeVideo);
-                document.getElementById("txtNomeVideo").innerHTML= data.nomeVideo;
-            },
-            error : function(erro){
-                alert("Erasmo here")
-                console.log("Erro");
-            }
-        });
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterMemoriaGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeMemoria").val(data.nomeMemoria);
+        //         document.getElementById("txtNomeMemoria").innerHTML= data.nomeMemoria;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterVideoGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeVideo").val(data.nomeVideo);
+        //         document.getElementById("txtNomeVideo").innerHTML= data.nomeVideo;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
 
     });
 
