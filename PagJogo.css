@@ -29,6 +29,19 @@ h1{
 .btn {
     border-radius: 2px;
 }
+
+.selecionarJogo{
+    margin-left: 7px;
+    margin-top: 20px;
+    height: 57px;
+    width: 380px;
+    background-color: yellow;
+    border-width: 1px;
+    border-style: solid;
+    border-color: yellow;
+    border-image: initial;
+}
+
 h2 {
     color: yellow;
     height: 50px;
