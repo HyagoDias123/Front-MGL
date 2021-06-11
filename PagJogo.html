@@ -150,24 +150,21 @@
     </table>
 </div>
 
+</body> 
 
 <script type="text/javascript">
     $(document).ready(function (){
 
-        let form = $("#frmSend");
-        var form_data = new FormData(form[0]); //Encode form elements for submission
         
         $('#cmbGames').click(function(e){
             $.ajax({
-            url :"https://localhost:44327/api/game/ObterListaGame",
+                url :"https://localhost:44327/api/game/ObterListaGame",
                 type: "POST",
                 dataType: "json",
                 processData: false,
                 contentType: false,
                 success: function (data) {
                     console.log(data);
-                    // $("#txtNomeArmazenamento").val(data.codigoGame);
-                    // document.getElementById("txtNomeArmazenamento").innerHTML= data.codigoGame;
 
                     if (data.length > 0){
                     var option = '<option>Selecione um Game </option>';
@@ -189,7 +186,30 @@
             });
         });
 
-        // $.ajax({
+
+        $('#cmbGames').change(function(e){
+		var codigoGameAjax = $('#cmbGames').val();
+		// $('#mensagem').html('<span class="mensagem">Aguarde,
+		// carregando ...</span>');
+
+		$.ajax({
+            url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
+                type: "post",
+                contentType: "multipart/form-data",
+                dataType: "json",
+                data: { "CodigoGame": codigoGameAjax},
+                success: function (data) {
+                    console.log(data);
+                    $("#txtNomeArmazenamento").val(data.nomeArmazenamento);
+                    document.getElementById("txtNomeArmazenamento").innerHTML= data.nomeArmazenamento;
+                },
+                error : function(erro){
+                    console.log("Erro");
+                }
+            });
+        });
+    });
+       // $.ajax({
         //    url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
         //     type: "Get",
         //     dataType: "json",
@@ -314,12 +334,9 @@
         //         console.log("Erro");
         //     }
         // });
-
-    });
-
 </script>
 
-</body>  
+ 
 
 </html>
 
