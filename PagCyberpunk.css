@@ -105,13 +105,13 @@ p {
 .imagemJogo h3{
     color: yellow;
     margin-top: 21px;
-    margin-left: 58px;
+    margin-left: 83px;
     text-decoration: underline;
 }
 .imagemJogo img{
     vertical-align: middle;
     border-style: none;
-    width: 280px;
+    width: 320px;
     height: 330px;
     margin-left: 30px;
 }
