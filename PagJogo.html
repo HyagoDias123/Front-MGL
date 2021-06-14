@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="UTF-8"/>  
+       <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie-edge">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <link rel="stylesheet" type="text/css" href="PagJogo.css" />
+       <link rel="stylesheet" href="PagJogo.css">
+       <title>MyGameList - Jogo</title>
+    </head>
+    <body>   
+        
+        
+       <h1 class="teste">MYGAMELIST</h1>
+
+       <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">MyGameList</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perfil</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="margin-left:1390px">Login</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastre-se</a>
+                </li>              
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <button id="btn-buscarGame" class="right btn btn-primary" type="button">
+        <i class="icon-file-upload"></i>Buscar lista de games:</button>
+    <form id="frmGame" class="frmGame" method="post" enctype="multipart/form-data">
+        <label></labe>
+        <select id="cmbGames" style=" margin-top: 25px; margin-left: 75px;">
+            <option value="0"> Selecione </option>
+        </select>
+    </form>
+    <button id="btn-upload" class="right btn btn-primary" type="button">
+        <i class="icon-file-upload"></i>Buscar</button>
+
+  
+    <h2>Sinopse</h2>
+
+    <div class="sinopse">
+    <p itemprop="descricao">
+        Cyberpunk 2077 é uma história de ação e aventura de mundo aberto ambientada em Night City, uma megalópole obcecada por poder, glamour e biomodificações.
+        <br/>      
+        Você joga como V, um mercenário fora da lei atrás de um implante único que carrega a chave da imortalidade.
+        <br/>  
+        Você pode personalizar o cyberware, as habilidades e o estilo de jogo do seu personagem e explorar uma vasta cidade, onde as escolhas moldam a história e o mundo ao seu redor.
+    </p> 
+    </div>
+
+<div class="imagemJogo">
+    <h3 id="titulo" class=titulo>Cyberpunk 2077</h3>
+    <img src="assets/PágCyberpunk/Cyberpunk.png" title="Cyberpunk 2077">
+    <div class= "">
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td id="txtNomeGame"></td>
+        </tr>
+        <tr>
+            <td>Plataformas:</td>
+            <td id="txtNomePlataformas"></td>
+        </tr>
+        <tr>
+            <td>Gênero(s):</td>
+            <td id="txtNomeGenero"></tr>
+
+        <tr>
+            <td>Classificação:</td>
+            <td id="txtNomeClassificacao"></td>
+        </tr>
+    </table>
+</div>
+</div>
+
+    <form>
+        <div class="progresso"> 
+        <select name="myinfo_status" id="myinfo_status" class="form-user-status js-form-user-status myinfo_updateInfo" data-class="Jogando"  disabled="">
+        <option selected="selected" value="1">Jogando</option>
+        <option value="2">Terminado</option>
+        <option value="3">Parei , mas vou jogar</option>
+        <option value="4">Nunca mais jogo</option>
+        <option value="6">Pretendo jogar</option>
+        </select>
+        </div>
+    </form>
+
+    <form>
+       <div class = avaliacao>
+       <select name="myinfo_score" id="myinfo_score" class="form-user-score js-form-user-score ml8"  disabled="">
+           <option selected="selected" value="0">Dê sua nota para o Jogo</option>
+           <option value="10">(10) PQP QUE JOGO FODA</option>
+           <option value="9">(9) CARALHO FODA!</option>
+           <option value="8">(8) BOM DEMAIS</option>
+           <option value="7">(7) BOM</option>
+           <option value="6">(6) OK</option>
+           <option value="5">(5) MEDIANO</option>
+           <option value="4">(4) RUIM</option>
+           <option value="3">(3) RUIM DEMAIS</option>
+           <option value="2">(2) PÉSSIMO</option>
+           <option value="1">(1) PQP QUE MERDA</option>
+           <option value="0">(0) PERDI MEU TEMPO</option>
+        </select>
+        </div>
+    </form>
+
+<div style="width: 100%; display: flex; margin-left: 7px;">
+<div class="requisitos" style="max-width: 50%;">
+    <h6 style="position:relative; top: 67px; left:29px">Requisitos para rodar Cyberpunk 2077</h6>
+    <table>
+        <tr>
+            <td>Requisitos Mínimos</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sistema:</td>
+            <td id="txtNomeSistema"></td>
+        </tr>
+        <tr>
+            <td>Processador:</td>
+            <td id="txtNomeProcessador"></td>
+        </tr>
+        <tr>
+            <td>Vídeo:</td>
+            <td id="txtNomeVideo"></td>
+        </tr>
+        <tr>
+            <td>Memória:</td>
+            <td id="txtNomeMemoria"></td>
+        </tr>
+        <tr>
+            <td>Armazenamento:</td>
+            <td id="txtNomeArmazenamento"></td>
+        </tr>
+    </table>
+</div>
+
+</body> 
+
+<script type="text/javascript">
+    $(document).ready(function (){
+
+        
+        $("#btn-buscarGame").click(function (event) {
+            $.ajax({
+                url :"https://localhost:44327/api/game/ObterListaGame",
+                type: "POST",
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    if (data.length > 0){
+                    var option; //= '<option>Selecione um Game </option>';
+                    $.each(data, function(i, obj){
+                    option += '<option value="'+obj.codigoGame+'">'+obj.nomeGame+'</option>';
+                    $('#cmbGames').html(option).show();
+                    })
+                    }else{
+                        alert("Deu ruim");
+                    }
+                    },
+                error : function(erro){
+                    console.log("Erro");
+                }
+            });
+        });
+
+
+        $("#btn-upload").click(function (event) {
+            var codigoGameAjax = $('#cmbGames').val();
+            var select = document.querySelector('#cmbGames');
+            var option = select.children[select.selectedIndex];
+            var texto = option.textContent;
+            
+            document.getElementById("titulo").innerHTML= texto;
+            document.getElementById("txtNomeGame").innerHTML= texto;
+
+            $.ajax({
+                url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
+                type: "post",
+                data: {CodigoGame: codigoGameAjax},
+                success: function (data) {
+                    console.log(data);
+                    document.getElementById("txtNomeArmazenamento").innerHTML= data.nomeArmazenamento;
+                },
+                error : function(erro){
+                    console.log("Erro");
+                }
+                });
+
+            // $.ajax({
+            //     url :"https://localhost:44327/api/GameDetail/ObterMemoriaGame",
+            //     type: "post",
+            //     data: {CodigoGame: codigoGameAjax},
+            //     success: function (data) {
+            //         document.getElementById("txtNomeMemoria").innerHTML= data.nomeMemoria;
+            //     },
+            //     error : function(erro){
+            //         console.log("Erro");
+            //     }
+            // });
+
+        });        
+
+    });
+
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterVideoGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeVideo").val(data.nomeVideo);
+        //         document.getElementById("txtNomeVideo").innerHTML= data.nomeVideo;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterProcessadorGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeProcessador").val(data.nomeProcessador);
+        //         document.getElementById("txtNomeProcessador").innerHTML= data.nomeProcessador;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterSistemaGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeSistema").val(data.nomeSistema);
+        //         document.getElementById("txtNomeSistema").innerHTML= data.nomeSistema;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterClassificacaoGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeClassificacao").val(data.nomeClassificacao);
+        //         document.getElementById("txtNomeClassificacao").innerHTML= data.nomeClassificacao;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterPlataformasGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomePlataformas").val(data.nomePlataformas);
+        //         document.getElementById("txtNomePlataformas").innerHTML= data.nomePlataformas;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+        // $.ajax({
+        //    url :"https://localhost:44327/api/GameDetail/ObterGeneroGame",
+        //     type: "Get",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         console.log(data);
+        //         $("#txtNomeGenero").val(data.nomeGenero);
+        //         document.getElementById("txtNomeGenero").innerHTML= data.nomeGenero;
+        //     },
+        //     error : function(erro){
+        //         console.log("Erro");
+        //     }
+        // });
+
+
+</script>
+
+</html>
+
+
