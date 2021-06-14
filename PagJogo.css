@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body {
+    color: #fff;
+    background: rgb(12, 12, 12);
+    width: 100%;
+    
+}
+
+h1{
+    color: yellow;
+    border: 1px solid yellow;
+    width: 250px;
+    margin-left: 740px;   
+}
+
+.form-control {
+    min-height: 41px;
+    background: rgb(246, 250, 3);
+    box-shadow: none !important;
+    border-color: #e3e3e3;
+}
+
+.form-control:focus {
+    border-color: rgb(230, 19, 19);
+}
+
+.form-control,
+.btn {
+    border-radius: 2px;
+}
+
+.selecionarJogo{
+    margin-left: 7px;
+    margin-top: 20px;
+    height: 57px;
+    width: 380px;
+    background-color: yellow;
+    border-width: 1px;
+    border-style: solid;
+    border-color: yellow;
+    border-image: initial;
+}
+
+h2 {
+    color: yellow;
+    height: 50px;
+    width: 116px;
+    position: absolute;
+    top: 360px;
+    left: 686px;
+    text-decoration: underline;
+}
+.sinopse{
+     color: rgb(229, 255, 0);
+     vertical-align: inherit;
+     height: 100px;
+     width: 400px;
+     position: absolute;
+     top: 300px;
+     left: 200px;
+}
+
+p {
+    margin-left: 215px;
+    margin-top: 130px;
+    margin-bottom: 1rem;
+    width: 680px;
+}
+.form-user-status{
+    background:white;
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    top: 275px;
+    left: 660px;
+}
+.form-user-score{
+    background:white;
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    top: 275px;
+    left: 409px;
+}
+.bg-light {
+    background-color: yellow!important;
+}
+.navbar-light .navbar-brand{
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(0, 0, 0);
+
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.botão{
+    margin-left: 122px;
+}
+
+.imagemJogo h3{
+    color: yellow;
+    margin-top: 21px;
+    margin-left: 58px;
+    text-decoration: underline;
+}
+.imagemJogo img{
+    vertical-align: middle;
+    border-style: none;
+    width: 280px;
+    height: 330px;
+    margin-left: 30px;
+}
+.imagemJogo table{
+    display: table;
+    margin-left: 30px;
+    margin-top: 21px;
+    border: 25px solid yellow; 
+}
+
+.imagemJogo td{
+    padding: 0px;
+    background-color: yellow;
+    color: black;
+}
+
+.screenshot{
+    margin-top: -714px;
+    margin-left: 1230px;
+    position: absolute;
+}
+
+.screenshot h4{
+    margin-left: 266px;
+    color: yellow;
+    text-decoration: underline;
+    
+}
+
+.screenshot img{
+    vertical-align: middle;
+    width: 330px;
+}
+.scroll{
+    width: 678px;
+    height: 300px;
+    background-color:yellow;
+    overflow-y: auto;
+}
+.personagens{
+    position: absolute;
+    margin-top: -243px;
+    display: flex;
+    margin-left: 417px;
+}
+
+.personagens h5{
+    position: absolute;
+    text-decoration: underline;
+    color: yellow;
+    top: -35px;
+}
+
+
+.personagens img{
+    vertical-align: middle;
+    width: 100px;
+    color: black;
+}
+
+.imgNome{
+    padding-left: 0px;
+    padding-bottom: 50px;
+    color: yellow;
+}
+
+h6{
+    color: yellow;
+    text-decoration: underline;
+}
+
+.requisitos table{
+    display: table;
+    margin-left: 30px;
+    margin-top: 76px;
+    border: 5px solid yellow;
+    max-height: 600px;
+}
+
+.requisitos td{
+    padding: 0px;
+    background-color: yellow;
+    color: black;
+}
+
+.requisitosR table{
+    display: table;
+    margin-left: 30px;
+    margin-top: 100px;
+    border: 5px solid yellow;
+    max-height: 600px;
+}
+
+.requisitosR td{
+    padding: 0px;
+    background-color: yellow;
+    color: black;
+}
+
+@media screen and (min-width:
+1366px) {
+ #main { min-width: 720px; }
+}
