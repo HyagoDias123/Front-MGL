@@ -105,7 +105,7 @@ p {
 .imagemJogo h3{
     color: yellow;
     margin-top: 21px;
-    margin-left: 83px;
+    margin-left: 66px;
     text-decoration: underline;
 }
 .imagemJogo img{
@@ -129,7 +129,7 @@ p {
 }
 
 .screenshot{
-    margin-top: -714px;
+    margin-top: -570px;
     margin-left: 1230px;
     position: absolute;
 }
@@ -153,7 +153,7 @@ p {
 }
 .personagens{
     position: absolute;
-    margin-top: -243px;
+    margin-top: -170px;
     display: flex;
     margin-left: 417px;
 }

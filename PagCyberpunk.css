@@ -120,6 +120,7 @@ p {
     margin-left: 30px;
     margin-top: 21px;
     border: 25px solid yellow; 
+    max-width: 320px;
 }
 
 .imagemJogo td{
