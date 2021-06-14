@@ -43,13 +43,18 @@
         </nav>
     </div>
 
-    <labe>Selecione um Jogo</labe>
-    <select id="cmbGames" style=" margin-top: 25px; margin-left: 75px;">
-        <option value="0"> Selecione </option>
-    </select>
+    <button id="btn-buscarGame" class="right btn btn-primary" type="button">
+        <i class="icon-file-upload"></i>Buscar lista de games:</button>
+    <form id="frmGame" class="frmGame" method="post" enctype="multipart/form-data">
+        <label></labe>
+        <select id="cmbGames" style=" margin-top: 25px; margin-left: 75px;">
+            <option value="0"> Selecione </option>
+        </select>
+    </form>
+    <button id="btn-upload" class="right btn btn-primary" type="button">
+        <i class="icon-file-upload"></i>Buscar</button>
 
-    <input type="button" value="buscar" id="btnGames"/>
-    
+  
     <h2>Sinopse</h2>
 
     <div class="sinopse">
@@ -63,13 +68,13 @@
     </div>
 
 <div class="imagemJogo">
-    <h3 class=titulo>Cyberpunk 2077</h3>
+    <h3 id="titulo" class=titulo>Cyberpunk 2077</h3>
     <img src="assets/PágCyberpunk/Cyberpunk.png" title="Cyberpunk 2077">
     <div class= "">
     <table>
         <tr>
             <td>Nome:</td>
-            <td id="txtNomeNome"></td>
+            <td id="txtNomeGame"></td>
         </tr>
         <tr>
             <td>Plataformas:</td>
@@ -155,7 +160,7 @@
     $(document).ready(function (){
 
         
-        $('#cmbGames').click(function(e){
+        $("#btn-buscarGame").click(function (event) {
             $.ajax({
                 url :"https://localhost:44327/api/game/ObterListaGame",
                 type: "POST",
@@ -163,19 +168,13 @@
                 processData: false,
                 contentType: false,
                 success: function (data) {
-                    console.log(data);
-
                     if (data.length > 0){
-                    var option = '<option>Selecione um Game </option>';
+                    var option; //= '<option>Selecione um Game </option>';
                     $.each(data, function(i, obj){
                     option += '<option value="'+obj.codigoGame+'">'+obj.nomeGame+'</option>';
-                    console.log(obj);
                     $('#cmbGames').html(option).show();
                     })
                     }else{
-                        // Reset();
-                        // $('#mensagem').html('<span class="mensagem"
-                        // >Não foram encontrados paises!</span>');
                         alert("Deu ruim");
                     }
                     },
@@ -186,55 +185,44 @@
         });
 
 
-        $('#cmbGames').change(function(e){
-		var codigoGameAjax = $('#cmbGames').val();
-		// $('#mensagem').html('<span class="mensagem">Aguarde,
-		// carregando ...</span>');
+        $("#btn-upload").click(function (event) {
+            var codigoGameAjax = $('#cmbGames').val();
+            var select = document.querySelector('#cmbGames');
+            var option = select.children[select.selectedIndex];
+            var texto = option.textContent;
+            
+            document.getElementById("titulo").innerHTML= texto;
+            document.getElementById("txtNomeGame").innerHTML= texto;
 
-		$.ajax({
-            url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
+            $.ajax({
+                url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
                 type: "post",
-                contentType: "multipart/form-data",
-                dataType: "json",
-                data: { "CodigoGame": codigoGameAjax},
+                data: {CodigoGame: codigoGameAjax},
                 success: function (data) {
                     console.log(data);
-                    $("#txtNomeArmazenamento").val(data.nomeArmazenamento);
                     document.getElementById("txtNomeArmazenamento").innerHTML= data.nomeArmazenamento;
                 },
                 error : function(erro){
                     console.log("Erro");
                 }
-            });
-        });
-    });
-       // $.ajax({
-        //    url :"https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
-        //     type: "Get",
-        //     dataType: "json",
-        //     success: function (data) {
-        //         console.log(data);
-        //         $("#txtNomeArmazenamento").val(data.nomeArmazenamento);
-        //         document.getElementById("txtNomeArmazenamento").innerHTML= data.nomeArmazenamento;
-        //     },
-        //     error : function(erro){
-        //         console.log("Erro");
-        //     }
-        // });
+                });
 
-        // $.ajax({
-        //    url :"https://localhost:44327/api/GameDetail/ObterMemoriaGame",
-        //     type: "Get",
-        //     dataType: "json",
-        //     success: function (data) {
-        //         console.log(data);
-        //         $("#txtNomeMemoria").val(data.nomeMemoria);
-        //         document.getElementById("txtNomeMemoria").innerHTML= data.nomeMemoria;
-        //     },
-        //     error : function(erro){
-        //         console.log("Erro");
-        //     }
-        // });
+            // $.ajax({
+            //     url :"https://localhost:44327/api/GameDetail/ObterMemoriaGame",
+            //     type: "post",
+            //     data: {CodigoGame: codigoGameAjax},
+            //     success: function (data) {
+            //         document.getElementById("txtNomeMemoria").innerHTML= data.nomeMemoria;
+            //     },
+            //     error : function(erro){
+            //         console.log("Erro");
+            //     }
+            // });
+
+        });        
+
+    });
+
 
         // $.ajax({
         //    url :"https://localhost:44327/api/GameDetail/ObterVideoGame",
@@ -320,22 +308,8 @@
         //     }
         // });
 
-        // $.ajax({
-        //    url :"https://localhost:44327/api/GameDetail/ObterNomeGame",
-        //     type: "Get",
-        //     dataType: "json",
-        //     success: function (data) {
-        //         console.log(data);
-        //         $("#txtNomeNome").val(data.nomeGenero);
-        //         document.getElementById("txtNomeNome").innerHTML= data.nomeNome;
-        //     },
-        //     error : function(erro){
-        //         console.log("Erro");
-        //     }
-        // });
-</script>
 
- 
+</script>
 
 </html>
 
