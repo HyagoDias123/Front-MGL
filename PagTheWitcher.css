@@ -102,20 +102,16 @@ p {
     color: rgb(0, 0, 0);
 }
 
-.botão{
-    margin-left: 145px;
-}
-
 .imagemJogo h3{
     color: yellow;
     margin-top: 21px;
-    margin-left: 58px;
+    margin-left: 100px;
     text-decoration: underline;
 }
 .imagemJogo img{
     vertical-align: middle;
     border-style: none;
-    width: 280px;
+    width: 320px;
     height: 330px;
     margin-left: 30px;
 }
@@ -133,7 +129,7 @@ p {
 }
 
 .screenshot{
-    margin-top: -714px;
+    margin-top: -690px;
     margin-left: 1230px;
     position: absolute;
 }
@@ -157,7 +153,7 @@ p {
 }
 .personagens{
     position: absolute;
-    margin-top: -243px;
+    margin-top: -170px;
     display: flex;
     margin-left: 417px;
 }
