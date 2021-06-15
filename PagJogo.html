@@ -55,7 +55,7 @@
         <select id="cmbGames" style="margin-top: 25px;margin-left: 75px;background-color: yellow;">
                 <option value="0"> Selecione </option>
             </select>
-    <button id="btn-upload" class="right btn btn-primary" type="button" style="border: yellow;background-color: yellow;color: black;">
+    <button hidden id="btn-upload" class="right btn btn-primary" type="button"  style="border: yellow;background-color: yellow;color: black;">
         <i class="icon-file-upload"></i>Buscar</button>
     </div>
 
@@ -182,6 +182,7 @@
                         $.each(data, function (i, obj) {
                             option += '<option value="' + obj.codigoGame + '">' + obj.nomeGame + '</option>';
                             $('#cmbGames').html(option).show();
+                            $("#btn-upload").click();
                         })
                     } else {
                         alert("Deu ruim");
@@ -194,7 +195,7 @@
         });
 
 
-        $("#btn-upload").click(function (event) {
+        $("#cmbGames").change(function (event) {
             var codigoGameAjax = $('#cmbGames').val();
             var select = document.querySelector('#cmbGames');
             var option = select.children[select.selectedIndex];
@@ -209,8 +210,6 @@
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
-                    //console.log(data.descricaoGame);
-                    //document.getElementById("txtSrcImagemGame").innerHTML = data.srcImagemGame;
                     document.getElementById("ImagemGame").src = data.srcImagemGame;
                     document.getElementById("txtdescricao").innerHTML = data.descricaoGame;
                 },
