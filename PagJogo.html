@@ -178,7 +178,7 @@
                         $.each(data, function (i, obj) {
                             option += '<option value="' + obj.codigoGame + '">' + obj.nomeGame + '</option>';
                             $('#cmbGames').html(option).show();
-                            $("#btn-upload").click();
+                            $("#cmbGames").change();
                         })
                     } else {
                         alert("Deu ruim");
@@ -243,7 +243,7 @@
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
-                    document.getElementById("txtNomeVideo").innerHTML = data.nomeVideo;
+                    document.getElementById("txtNomeVideo").innerHTML = data.nomePlacaVideo;
                 },
                 error: function (erro) {
                     console.log("Erro");
@@ -267,7 +267,7 @@
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
-                    document.getElementById("txtNomeSistema").innerHTML = data.nomeSistema;
+                    document.getElementById("txtNomeSistema").innerHTML = data.nomeSO;
                 },
                 error: function (erro) {
                     console.log("Erro");
@@ -291,7 +291,7 @@
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
-                    document.getElementById("txtNomePlataformas").innerHTML = data.nomePlataformas;
+                    document.getElementById("txtNomePlataformas").innerHTML = data.nomePlataforma;
                 },
                 error: function (erro) {
                     console.log("Erro");
