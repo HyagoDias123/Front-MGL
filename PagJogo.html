@@ -56,14 +56,14 @@
                 <option value="0"> Selecione </option>
             </select>
     <button id="btn-upload" class="right btn btn-primary" type="button" style="border: yellow;background-color: yellow;color: black;">
-        <i class="icon-file-upload"></i>Visualizar</button>
+        <i class="icon-file-upload"></i>Buscar</button>
     </div>
 
 
     <h2>Sinopse</h2>
 
     <div class="sinopse">
-        <p itemprop="descricao">
+        <p id="txtdescricao" itemprop="descricao">
             Cyberpunk 2077 é uma história de ação e aventura de mundo aberto ambientada em Night City, uma megalópole
             obcecada por poder, glamour e biomodificações.
             <br />
@@ -74,9 +74,9 @@
         </p>
     </div>
 
-    <div class="imagemJogo" style="margin-left: 408px;">
+    <div class="imagemJogo">
         <h3 id="titulo" class=titulo>Cyberpunk 2077</h3>
-        <img src="assets/PagJogo/Cyberpunk/Cyberpunk.png" title="Cyberpunk 2077">
+        <img id="ImagemGame" src="assets/PagJogo/Cyberpunk/Cyberpunk.png" title="Game">
         <div class="">
             <table>
                 <tr>
@@ -100,8 +100,6 @@
         </div>
     </div>
 
-
-    
     <form>
         <div class="progresso">
             <select name="myinfo_status" id="myinfo_status"
@@ -135,9 +133,13 @@
     </form>
 
     <div style="width: 100%; display: flex; margin-left: 7px;">
-        <div class="requisitos" style="max-width: 50%; margin-left: 399px;">
-            <h6 style="position:relative; top: 67px; left:29px">Requisitos Mínimos</h6>
+        <div class="requisitos" style="max-width: 50%;">
+            <h6 style="position:relative; top: 67px; left:29px">Requisitos para rodar Cyberpunk 2077</h6>
             <table>
+                <tr>
+                    <td>Requisitos Mínimos</td>
+                    <td></td>
+                </tr>
                 <tr>
                     <td>Sistema:</td>
                     <td id="txtNomeSistema"></td>
@@ -201,12 +203,27 @@
             document.getElementById("titulo").innerHTML = texto;
             document.getElementById("txtNomeGame").innerHTML = texto;
 
+
+            $.ajax({
+                url: "https://localhost:44327/api/Game/ObterGame",
+                type: "post",
+                data: { CodigoGame: codigoGameAjax },
+                success: function (data) {
+                    //console.log(data.descricaoGame);
+                    //document.getElementById("txtSrcImagemGame").innerHTML = data.srcImagemGame;
+                    document.getElementById("ImagemGame").src = data.srcImagemGame;
+                    document.getElementById("txtdescricao").innerHTML = data.descricaoGame;
+                },
+                error: function (erro) {
+                    console.log("Erro");
+                }
+            });
+
             $.ajax({
                 url: "https://localhost:44327/api/GameDetail/ObterArmazenamentoGame",
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
-                    console.log(data);
                     document.getElementById("txtNomeArmazenamento").innerHTML = data.nomeArmazenamento;
                 },
                 error: function (erro) {
@@ -227,7 +244,7 @@
             });
 
             $.ajax({
-                url: "https://localhost:44327/api/GameDetail/ObterVideoGame",
+                url: "https://localhost:44327/api/GameDetail/ObterPlacaVideoGame",
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
@@ -251,7 +268,7 @@
             });
 
             $.ajax({
-                url: "https://localhost:44327/api/GameDetail/ObterSistemaGame",
+                url: "https://localhost:44327/api/GameDetail/ObterSOGame",
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
@@ -275,7 +292,7 @@
             });
 
             $.ajax({
-                url: "https://localhost:44327/api/GameDetail/ObterPlataformasGame",
+                url: "https://localhost:44327/api/GameDetail/ObterPlataformaGame",
                 type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
@@ -287,11 +304,11 @@
             });
 
             $.ajax({
-                url: "https://localhost:44327/api/GameDetail/ObterGeneroGame",
-                type: "Get",
+                url: "https://localhost:44327/api/GameDetail/ObterCategoriaGame",
+                type: "post",
                 data: { CodigoGame: codigoGameAjax },
                 success: function (data) {
-                    document.getElementById("txtNomeGenero").innerHTML = data.nomeGenero;
+                    document.getElementById("txtNomeGenero").innerHTML = data.nomeCategoria;
                 },
                 error: function (erro) {
                     console.log("Erro");
