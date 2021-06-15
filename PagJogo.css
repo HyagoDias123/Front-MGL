@@ -48,7 +48,7 @@ h2 {
     width: 116px;
     position: absolute;
     top: 360px;
-    left: 686px;
+    left: 1058px;
     text-decoration: underline;
 }
 .sinopse{
@@ -62,7 +62,7 @@ h2 {
 }
 
 p {
-    margin-left: 215px;
+    margin-left: 600px;
     margin-top: 130px;
     margin-bottom: 1rem;
     width: 680px;
@@ -73,7 +73,7 @@ p {
     width: 120px;
     position: absolute;
     top: 275px;
-    left: 660px;
+    left: 1157px;
 }
 .form-user-score{
     background:white;
@@ -81,7 +81,7 @@ p {
     width: 200px;
     position: absolute;
     top: 275px;
-    left: 409px;
+    left: 900px;
 }
 .bg-light {
     background-color: yellow!important;
@@ -103,7 +103,7 @@ p {
 }
 
 .botão{
-    margin-left: 145px;
+    margin-left: 803px;
     
 }
 
